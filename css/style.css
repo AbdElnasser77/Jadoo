@@ -1,0 +1,193 @@
+/* general css */
+
+:root {
+    --color-one: #181E4B;
+    --color-two: #5E6282;
+    --color-three: #DF6951;
+    --main-font: "Volkhov", serif;
+    --secondery-font: "Poppins", sans-serif;
+}
+
+.container {
+    width: 1200px;
+    padding: 0px 25px;
+    margin: 0px auto;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+/* Nav Section */
+
+nav{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    z-index: 1000;
+    background-color: teal;
+}
+
+
+/* hero Section */
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+main h1 {
+    font-family: var(--main-font);
+    font-size: 84px;
+    color: var(--color-one);
+    font-weight: bold;
+    letter-spacing: -4%;
+    position: relative;
+
+}
+main .h1-decore::after{
+    content: '';
+    width: 400px;
+    height: 100px;
+    background-image: url(../Assets/Decore.png);
+    background-repeat: no-repeat;
+    right: 7%;
+    background-position: 0% 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+main p {
+    font-family: var(--secondery-font);
+    color: var(--color-two);
+    font-size: 16px;
+    line-height: 30px;
+    width: 70%;
+}
+
+main .Tagline {
+    font-size: 20px;
+    color: var(--color-three);
+    font-weight: bold;
+    font-family: var(--secondery-font);
+}
+
+main .img-section {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+main .text-section {
+    width: 60%;
+}
+
+.img-section img {
+    width: 100%;
+}
+
+.image-decore {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.hero-container {
+    display: flex;
+    position: relative;
+}
+
+.buttons {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    padding-top: 25px;
+}
+
+.buttons .btn1 {
+    border-radius: 10px;
+    background-color: #F1A501;
+    color: white;
+}
+
+.btn {
+    height: 60px;
+    width: 170px;
+    border: none;
+    font-size: 18px;
+    font-family: var(--secondery-font);
+}
+
+.buttons .btn2 {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+}
+
+.buttons .demo-btn {
+    font-size: 17px;
+    color: #686D77;
+    border: none;
+    background-color: transparent;
+    font-family: var(--secondery-font);
+}
+
+.buttons .play {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DF6951;
+    border-radius: 50%;
+}
+
+
+
+
+html{
+    position: relative;
+    overflow: hidden;
+}
+ #dify-chatbot-bubble-window{
+    bottom: -5% !important;
+    right: 5% !important;
+    position: fixed;
+ }
+
+ .bg-workflow-process-bg{
+    display: none !important;
+    color: #181E4B !important;
+ }
+
+/* dify ai */
+
+/* Hide Dify watermark */
+.dify-watermark,
+.powered-by-dify,
+[class*="watermark"],
+[class*="powered-by"] {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Alternative selectors that might work */
+.dify-chat-footer,
+.dify-branding {
+    display: none !important;
+}
