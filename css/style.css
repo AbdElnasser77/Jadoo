@@ -5,6 +5,7 @@
     --color-two: #5E6282;
     --color-three: #DF6951;
     --color-four: #F0BB1F;
+    --color-five:#14183E;
     --main-font: "Volkhov", serif;
     --secondery-font: "Poppins", sans-serif;
     --nav-font: "Google Sans Code", monospace;
@@ -33,15 +34,39 @@ img {
     padding: 0;
     margin: 0;
 }
-
+p{
+    font-family: var(--secondery-font);
+    color: var(--color-two);
+}
 a {
     text-decoration: none;
     color: black;
 }
-
 ul {
     list-style: none;
     display: flex;
+}
+
+section{
+    padding: 70px 0px;
+}
+
+.section-header{
+    text-align: center;
+}
+.section-header span{
+    font-weight: 600;
+    font-size: 18px;
+    font-family: var(--secondery-font);
+    color: var(--color-two);
+}
+
+
+.section-header h2{
+    font-weight: bold;
+    font-family: var(--main-font);
+    font-size: 50px;
+    color: var(--color-five);
 }
 
 /* Nav Section */
@@ -293,4 +318,68 @@ main .text-section {
     justify-content: center;
     background-color: #DF6951;
     border-radius: 50%;
+}
+
+/* Services */
+
+.services{
+    padding: 60px 0px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    gap: 30px;
+}
+.services h3{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--secondery-font);
+    padding-top: 27px;
+    padding-bottom: 12px;
+}
+.services p{
+    /* font-family: var(--secondery-font); */
+}
+
+.category{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 250px;
+    height: 310px;
+    border-radius: 36px;
+    transition: 0.5s all ease;
+    position: relative;
+    background-color: white;
+}
+.category img{
+    width:fit-content;
+}
+
+.category:hover{
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.category:hover::after {
+    opacity: 1;
+    transition: all 0.4s ease;
+
+}
+.category .plane{
+    transform: rotate(-30deg);
+}
+
+.category::after{
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-three);
+    position: absolute;
+    z-index: -4;
+    left: -10%;
+    bottom: -7%;
+    border-top-left-radius: 30px;
+    opacity: 0;
+    transition: all 0.4s ease;
+
 }
