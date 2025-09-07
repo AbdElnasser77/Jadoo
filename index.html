@@ -13,34 +13,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
 
     <header>
-        <div class="container">
-            <nav>
-                <a href="#"><img src="Assets/Jadoo.png" alt="Jadoo"></a>
+        <nav>
+            <div class="container">
+                <div class="navbar">
+                    <div class="nav-brand">
+                        <a href="#"><img src="Assets/Jadoo.png" alt="Jadoo"></a>
+                    </div>
 
-                <ul>
-                    <li>Destinations</li>
-                    <li>Hotels</li>
-                    <li>Flights</li>
-                    <li>Bookings</li>
-                </ul>
+                    <ul>
+                        <li> <a href=""> Destinations </a> </li>
+                        <li> <a href=""> Hotels </a> </li>
+                        <li> <a href=""> Flights </a> </li>
+                        <li> <a href=""> Bookings </a> </li>
+                    </ul>
 
-                <div class="auth-buttons">
-                    <a href=""> Login</a>
-                    <a href=""> Sign up</a>
+                    <div class="auth-buttons">
+                        <a href="" class="login"> Login </a>
+                        <a href="" class="signup">Sign up</a>
+                        <a href="">EN <i class="fa-solid fa-angle-down"></i> </a>
+                    </div>
+
+
                 </div>
-
-                <a href="">EN</a>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
-
 
     <main id="Hero">
         <div class="image-decore">
@@ -59,52 +63,26 @@
                             <div class="play">
                                 <i class="fa-solid fa-play"></i>
                             </div>
-                            <button class="demo-btn">Play Demo</button>
+                            <a class="demo-btn">Play Demo</button>
                         </div>
                     </div>
                 </div>
-
                 <div class="img-section">
-                    <img src="Assets/Traveller 1.png" alt="">
+                    <img src="Assets/Traveller 1.png" alt="Jadoo Travel">
+                </div>
+                <div class="planes">
+                    <img class="plane-decore1" src="Assets/plane.png" alt="">
+                    <img class="plane-decore2" src="Assets/plane.png" alt="">
                 </div>
             </div>
-        </div>
+        </div>  
 
     </main>
-    <script>
-        window.difyChatbotConfig = {
-            token: 'c1fvKEfA38eaC03U',
-            inputs: {
-                // You can define the inputs from the Start node here
-                // key is the variable name
-                // e.g.
-                // name: "NAME"
-            },
-            systemVariables: {
-                // user_id: 'YOU CAN DEFINE USER ID HERE',
-                // conversation_id: 'YOU CAN DEFINE CONVERSATION ID HERE, IT MUST BE A VALID UUID',
-            },
-            userVariables: {
-                // avatar_url: 'YOU CAN DEFINE USER AVATAR URL HERE',
-                // name: 'YOU CAN DEFINE USER NAME HERE',
-            },
-        }
-    </script>
-    <script src="https://udify.app/embed.min.js" id="c1fvKEfA38eaC03U" defer>
-    </script>
-    <style>
-        #dify-chatbot-bubble-button {
-            background-color: #1C64F2 !important;
-        }
 
-        #dify-chatbot-bubble-window {
-            width: 24rem !important;
-            height: 40rem !important;
-        }
-    </style>
+    <section></section>
 
 
- <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

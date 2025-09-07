@@ -4,14 +4,29 @@
     --color-one: #181E4B;
     --color-two: #5E6282;
     --color-three: #DF6951;
+    --color-four: #F0BB1F;
     --main-font: "Volkhov", serif;
     --secondery-font: "Poppins", sans-serif;
+    --nav-font: "Google Sans Code", monospace;
 }
 
 .container {
     width: 1200px;
     padding: 0px 25px;
     margin: 0px auto;
+
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+    /* Safari, Chrome */
+    -khtml-user-drag: none;
+    /* Older Konqueror browsers */
+    -moz-user-drag: none;
+    /* Firefox (not always needed) */
+    -o-user-drag: none;
+    /* Old Opera */
 }
 
 * {
@@ -19,23 +34,111 @@
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
 
-
-ul{
+ul {
     list-style: none;
     display: flex;
 }
 
 /* Nav Section */
 
-nav{
+nav {
     position: fixed;
     display: flex;
-    width: 100%;
     z-index: 1000;
-    background-color: teal;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.navbar a {
+    font-family: var(--nav-font);
+    font-size: 17px;
+}
+
+.navbar li {
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.navbar li:hover::after {
+    right: 0;
+    transition: all 0.5s ease;
+}
+
+.navbar li::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-four);
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    transition: all 0.5s ease;
+}
+
+.navbar ul {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar .nav-brand {
+    position: relative;
+    margin-right: 50px;
+}
+
+.navbar .nav-brand::before {
+    content: '';
+    width: 20px;
+    background-color: var(--color-four);
+    height: 17px;
+    position: absolute;
+    z-index: -1;
+    right: 25px;
+    bottom: 0;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar .nav-brand::after {
+    content: '';
+    width: 20px;
+    background-color: var(--color-four);
+    height: 17px;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.signup {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0px 20px;
+    transition: background-color 0.5s ease;
+}
+
+.signup:hover {
+    /* border: 2px solid black; */
+    background-color: var(--color-four);
+}
 
 /* hero Section */
 
@@ -56,7 +159,8 @@ main h1 {
     position: relative;
 
 }
-main .h1-decore::after{
+
+main .h1-decore::after {
     content: '';
     width: 400px;
     height: 100px;
@@ -89,20 +193,36 @@ main .img-section {
     top: 50%;
     right: 0;
     transform: translate(0, -50%);
+    z-index: 1;
 }
+
+.plane-decore1 {
+    position: absolute;
+    transform: translate(-50%, -35%);
+}
+
+.plane-decore2 {
+    position: absolute;
+    right: 0;
+    transform: translate(50%, 25%);
+}
+
 
 main .text-section {
     width: 60%;
+    user-select: none;
 }
 
 .img-section img {
     width: 100%;
+    transform: scale(1.2);
 }
 
 .image-decore {
     position: absolute;
     top: 0;
     right: 0;
+    transform: scale(1.2);
 }
 
 .hero-container {
@@ -121,6 +241,12 @@ main .text-section {
     border-radius: 10px;
     background-color: #F1A501;
     color: white;
+    transition: 0.4s all ease;
+}
+
+.buttons .btn1:hover {
+    background-color: #ffae00;
+    cursor: pointer;
 }
 
 .btn {
@@ -137,6 +263,18 @@ main .text-section {
     align-items: center;
     justify-content: space-between;
     width: 150px;
+    transition: 0.4s all ease;
+
+}
+
+.buttons .btn2 a {
+    transition: 0.4s all ease;
+}
+
+.buttons .btn2:hover,
+.buttons .btn2:hover a {
+    color: var(--color-four);
+    cursor: pointer;
 }
 
 .buttons .demo-btn {
@@ -155,39 +293,4 @@ main .text-section {
     justify-content: center;
     background-color: #DF6951;
     border-radius: 50%;
-}
-
-
-
-
-html{
-    position: relative;
-    overflow: hidden;
-}
- #dify-chatbot-bubble-window{
-    bottom: -5% !important;
-    right: 5% !important;
-    position: fixed;
- }
-
- .bg-workflow-process-bg{
-    display: none !important;
-    color: #181E4B !important;
- }
-
-/* dify ai */
-
-/* Hide Dify watermark */
-.dify-watermark,
-.powered-by-dify,
-[class*="watermark"],
-[class*="powered-by"] {
-    display: none !important;
-    visibility: hidden !important;
-}
-
-/* Alternative selectors that might work */
-.dify-chat-footer,
-.dify-branding {
-    display: none !important;
 }
